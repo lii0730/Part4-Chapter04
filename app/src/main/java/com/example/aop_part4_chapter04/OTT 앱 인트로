@@ -1,0 +1,17 @@
+
+<OTT 앱 인트로 따라하기>
+    - 모션 레이아웃 1차
+        1. Scroll View
+        2. Motion Layout
+        3. ConstraintSet
+    - 헤더 영역
+        1. AppBar
+        2. CollapsingToolbar
+        3. Inset(FitSystemWindow)
+    - 모션 레이아웃 2차
+        1. MotionLayout
+        2. ConstraintSet
+
+
+MotionLayout 소개
+- ConstraintLayout 으로 반응형 UI 빌드
