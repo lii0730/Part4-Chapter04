@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+	<ConstraintSet android:id="@+id/start">
+
+		<Constraint
+			android:id="@+id/tv_imageView"
+			android:layout_width="0dp"
+			android:layout_height="300dp"
+			android:translationY="320dp"
+			android:alpha="0"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintEnd_toEndOf="parent"
+			motion:layout_constraintStart_toStartOf="parent" />
+		<Constraint
+			android:id="@+id/laptop_imageView"
+			android:layout_width="250dp"
+			android:layout_height="200dp"
+			android:translationY="220dp"
+			android:alpha="0"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintEnd_toEndOf="parent"
+			motion:layout_constraintStart_toStartOf="parent"
+			motion:layout_constraintTop_toTopOf="@+id/tv_imageView"
+			motion:layout_constraintVertical_bias=".9" />
+		<Constraint
+			android:id="@+id/tablet_imageView"
+			android:layout_width="150dp"
+			android:layout_height="100dp"
+			android:translationY="220dp"
+			android:translationX="-150dp"
+			android:alpha="0"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintStart_toStartOf="parent"
+			motion:layout_constraintTop_toTopOf="@+id/tv_imageView"
+			motion:layout_constraintHorizontal_bias="0.1"
+			motion:layout_constraintVertical_bias="0.8" />
+		<Constraint
+			android:id="@+id/phone_imageView"
+			android:layout_width="150dp"
+			android:layout_height="200dp"
+			android:translationY="320dp"
+			android:translationX="150dp"
+			android:alpha="0"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintEnd_toEndOf="parent"
+			motion:layout_constraintTop_toTopOf="@+id/tv_imageView" />
+
+		<Constraint
+			android:id="@+id/main_motionLayout"
+			motion:layout_constraintEnd_toEndOf="parent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintStart_toStartOf="parent" />
+		<Constraint
+			android:id="@+id/usesFreeButton"
+			motion:layout_constraintEnd_toEndOf="parent"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:translationY="300dp"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			android:layout_marginBottom="20dp"
+			motion:layout_constraintStart_toStartOf="parent" />
+	</ConstraintSet>
+
+	<ConstraintSet android:id="@+id/end">
+		<Constraint
+			android:id="@+id/imageView"
+			android:layout_width="0dp"
+			android:layout_height="300dp"
+			android:alpha="1"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintEnd_toEndOf="parent"
+			motion:layout_constraintStart_toStartOf="parent" />
+		<Constraint
+			android:id="@+id/tv_imageView"
+			android:layout_width="0dp"
+			android:layout_height="300dp"
+			android:alpha="1"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintEnd_toEndOf="parent"
+			motion:layout_constraintStart_toStartOf="parent" />
+		<Constraint
+			android:id="@+id/laptop_imageView"
+			android:layout_width="250dp"
+			android:layout_height="200dp"
+			android:alpha="1"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintEnd_toEndOf="parent"
+			motion:layout_constraintStart_toStartOf="parent"
+			motion:layout_constraintTop_toTopOf="@+id/tv_imageView"
+			motion:layout_constraintVertical_bias="0.9" />
+		<Constraint
+			android:id="@+id/tablet_imageView"
+			android:layout_width="150dp"
+			android:layout_height="100dp"
+			android:alpha="1"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintStart_toStartOf="parent"
+			motion:layout_constraintTop_toTopOf="@+id/tv_imageView"
+			motion:layout_constraintVertical_bias="0.8" />
+		<Constraint
+			android:id="@+id/phone_imageView"
+			android:layout_width="150dp"
+			android:layout_height="200dp"
+			android:alpha="1"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintEnd_toEndOf="parent"
+			motion:layout_constraintTop_toTopOf="@+id/tv_imageView" />
+
+		<Constraint
+			android:id="@+id/motionLayout1"
+			motion:layout_constraintEnd_toEndOf="parent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			motion:layout_constraintStart_toStartOf="parent" />
+		<Constraint
+			android:id="@+id/usesFreeButton"
+			motion:layout_constraintEnd_toEndOf="parent"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			motion:layout_constraintBottom_toBottomOf="parent"
+			android:layout_marginBottom="20dp"
+			motion:layout_constraintStart_toStartOf="parent" />
+	</ConstraintSet>
+
+	<Transition
+		motion:constraintSetEnd="@+id/end"
+		motion:constraintSetStart="@id/start"
+		motion:duration="1500">
+
+		<KeyFrameSet></KeyFrameSet>
+
+		<OnSwipe motion:dragDirection="dragUp"
+			motion:touchRegionId="@id/motionLayout1"/>
+	</Transition>
+</MotionScene>
