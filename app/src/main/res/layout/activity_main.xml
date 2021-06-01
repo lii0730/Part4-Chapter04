@@ -1,18 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/top_coordinatorLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="false">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--	<androidx.constraintlayout.motion.widget.MotionLayout-->
+<!--		android:id="@+id/buttonShownMotionLayout"-->
+<!--		android:layout_width="match_parent"-->
+<!--		android:layout_height="match_parent"-->
+<!--		app:layoutDescription="@xml/button_shown_scene"-->
+<!--		app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--		android:fitsSystemWindows="true"-->
+<!--		tools:context=".MainActivity">-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--&lt;!&ndash;		<androidx.core.widget.NestedScrollView&ndash;&gt;-->
+<!--&lt;!&ndash;			android:id="@+id/scrollView"&ndash;&gt;-->
+<!--&lt;!&ndash;			android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;			android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;			android:fitsSystemWindows="true">&ndash;&gt;-->
+
+<!--&lt;!&ndash;			<LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;				android:id="@+id/linear_layout"&ndash;&gt;-->
+<!--&lt;!&ndash;				android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;				android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;				android:backgroundTint="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;				android:orientation="vertical">&ndash;&gt;-->
+
+<!--&lt;!&ndash;				<androidx.constraintlayout.widget.ConstraintLayout&ndash;&gt;-->
+<!--&lt;!&ndash;					android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;					android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;					android:background="@color/black">&ndash;&gt;-->
+
+<!--&lt;!&ndash;					<TextView&ndash;&gt;-->
+<!--&lt;!&ndash;						android:id="@+id/titleTextView"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:text="지금 무료로\n 무제한 감상 시작"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:textSize="20sp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;					<TextView&ndash;&gt;-->
+<!--&lt;!&ndash;						android:id="@+id/subtitleTextview"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_marginTop="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:text="영화, 드라마, 예능 등 8만편의 작품"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:textColor="@color/cardview_dark_background"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:textSize="17sp"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintTop_toBottomOf="@+id/titleTextView"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintVertical_chainStyle="packed" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;				</androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;				<androidx.constraintlayout.motion.widget.MotionLayout&ndash;&gt;-->
+<!--&lt;!&ndash;					android:id="@+id/motionLayout1"&ndash;&gt;-->
+<!--&lt;!&ndash;					android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;					android:layout_height="300dp"&ndash;&gt;-->
+<!--&lt;!&ndash;					android:layout_gravity="bottom"&ndash;&gt;-->
+<!--&lt;!&ndash;					android:background="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;					app:layoutDescription="@xml/activity_main_scene">&ndash;&gt;-->
+
+<!--&lt;!&ndash;					<ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;						android:id="@+id/tv_imageView"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_height="300dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:padding="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:src="@drawable/ic_baseline_tv_24"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintStart_toStartOf="parent" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;					<ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;						android:id="@+id/laptop_imageView"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_width="250dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_height="200dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:src="@drawable/ic_baseline_laptop_24"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintTop_toTopOf="@+id/tv_imageView"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintVertical_bias=".9" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;					<ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;						android:id="@+id/tablet_imageView"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_width="150dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_height="100dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:src="@drawable/ic_baseline_tablet_24"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintTop_toTopOf="@+id/tv_imageView"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintVertical_bias="0.8" />&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;					<ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;						android:id="@+id/phone_imageView"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_width="150dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:layout_height="200dp"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;						android:src="@drawable/ic_baseline_phone_android_24"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;						app:layout_constraintTop_toTopOf="@+id/tv_imageView" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;				</androidx.constraintlayout.motion.widget.MotionLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;			</LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;		</androidx.core.widget.NestedScrollView>&ndash;&gt;-->
+
+<!--		<Button-->
+<!--			android:id="@+id/usesFreeButton"-->
+<!--			android:layout_width="0dp"-->
+<!--			android:layout_height="64dp"-->
+<!--			android:layout_marginBottom="20dp"-->
+<!--			android:text="2주 무료 사용하기"-->
+<!--			android:textStyle="bold"-->
+<!--			app:layout_constraintBottom_toBottomOf="parent"-->
+<!--			app:layout_constraintEnd_toEndOf="parent"-->
+<!--			app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--	</androidx.constraintlayout.motion.widget.MotionLayout>-->
+
+	
+
+		<androidx.constraintlayout.motion.widget.MotionLayout
+			android:id="@+id/main_motionLayout"
+			android:layout_width="match_parent"
+			android:layout_height="300dp"
+			android:layout_gravity="bottom"
+			app:layoutDescription="@xml/activity_main_scene"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent">
+
+			<ImageView
+				android:id="@+id/tv_imageView"
+				android:layout_width="0dp"
+				android:layout_height="300dp"
+				android:padding="20dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/ic_baseline_tv_24"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent" />
+
+			<ImageView
+				android:id="@+id/laptop_imageView"
+				android:layout_width="250dp"
+				android:layout_height="200dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/ic_baseline_laptop_24"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/tv_imageView"
+				app:layout_constraintVertical_bias=".9" />
+
+			<ImageView
+				android:id="@+id/tablet_imageView"
+				android:layout_width="150dp"
+				android:layout_height="100dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/ic_baseline_tablet_24"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/tv_imageView"
+				app:layout_constraintVertical_bias="0.8" />
+
+
+			<ImageView
+				android:id="@+id/phone_imageView"
+				android:layout_width="150dp"
+				android:layout_height="200dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/ic_baseline_phone_android_24"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/tv_imageView" />
+
+			<Button
+				android:id="@+id/usesFreeButton"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="20dp"
+				android:text="2주 무료 사용하기"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent" />
+
+		</androidx.constraintlayout.motion.widget.MotionLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
