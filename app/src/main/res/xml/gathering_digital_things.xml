@@ -13,14 +13,55 @@
                 android:scaleX="0.9"
                 android:scaleY="0.9"
                 app:framePosition="0"
-                app:motionTarget="@+id/tv_imageView"/>
+                app:motionTarget="@+id/tv_imageView" />
 
             <KeyAttribute
                 android:alpha="1"
                 android:scaleX="1"
                 android:scaleY="1"
-                app:framePosition="100"
-                app:motionTarget="@+id/tv_imageView"/>
+                app:framePosition="80"
+                app:motionTarget="@+id/tv_imageView" />
+
+            <KeyAttribute
+                app:motionTarget="@+id/laptop_imageView"
+                app:framePosition="0"
+                android:alpha="0"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+
+            <KeyAttribute
+                app:motionTarget="@+id/laptop_imageView"
+                app:framePosition="80"
+                android:alpha="1"
+                android:scaleX="1"
+                android:scaleY="1"/>
+            <KeyAttribute
+                app:motionTarget="@+id/tablet_imageView"
+                app:framePosition="0"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:alpha="0" />
+
+            <KeyAttribute
+                app:motionTarget="@+id/tablet_imageView"
+                app:framePosition="80"
+                android:alpha="1"
+                android:scaleX="1"
+                android:scaleY="1"/>
+
+            <KeyAttribute
+                app:motionTarget="@+id/phone_imageView"
+                app:framePosition="0"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:alpha="0" />
+            <KeyAttribute
+                app:motionTarget="@+id/phone_imageView"
+                app:framePosition="80"
+                android:alpha="1"
+                android:scaleX="1"
+                android:scaleY="1" />
+
         </KeyFrameSet>
     </Transition>
 
@@ -34,6 +75,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.9" />
+        <Constraint
+            android:id="@+id/laptop_imageView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.74" />
+        <Constraint
+            android:id="@+id/tablet_imageView"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/phone_imageView"
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -45,5 +107,33 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/laptop_imageView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            app:layout_constraintHorizontal_bias=".7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97" />
+        <Constraint
+            android:id="@+id/tablet_imageView"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8" />
+        <Constraint
+            android:id="@+id/phone_imageView"
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent" />
     </ConstraintSet>
 </MotionScene>

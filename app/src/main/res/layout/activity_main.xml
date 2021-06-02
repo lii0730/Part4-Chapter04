@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/buttonShownMotionLayout"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
+	android:background="@color/black"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	app:layoutDescription="@xml/button_shown_scene"
 	tools:context=".MainActivity">
 
-	<ScrollView
+	<androidx.core.widget.NestedScrollView
 		android:id="@+id/scrollView"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
-		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintBottom_toBottomOf="parent">
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
 
 		<LinearLayout
 			android:id="@+id/linearLayout"
@@ -24,7 +27,7 @@
 			<View
 				android:layout_width="match_parent"
 				android:layout_height="600dp"
-				android:background="@color/black"/>
+				android:background="@color/black" />
 
 			<androidx.constraintlayout.motion.widget.MotionLayout
 				android:id="@+id/gatheringDigitalThingsLayout"
@@ -35,20 +38,121 @@
 
 				<ImageView
 					android:id="@+id/tv_imageView"
-					android:layout_width="400dp"
+					android:layout_width="350dp"
 					android:layout_height="250dp"
-					android:src="@drawable/ic_baseline_tv_24"
-					android:scaleType="centerCrop"
-					app:layout_constraintStart_toStartOf="parent"
+					android:scaleType="fitCenter"
+					android:src="@drawable/television"
+					app:layout_constraintBottom_toBottomOf="parent"
 					app:layout_constraintEnd_toEndOf="parent"
-					app:layout_constraintTop_toTopOf="parent"
-					app:layout_constraintBottom_toBottomOf="parent"/>
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<ImageView
+					android:id="@+id/laptop_imageView"
+					android:layout_width="300dp"
+					android:layout_height="200dp"
+					android:scaleType="fitCenter"
+					android:src="@drawable/laptop"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<ImageView
+					android:id="@+id/tablet_imageView"
+					android:layout_width="200dp"
+					android:layout_height="100dp"
+					android:scaleType="center"
+					android:src="@drawable/tablet"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<ImageView
+					android:id="@+id/phone_imageView"
+					android:layout_width="80dp"
+					android:layout_height="90dp"
+					android:scaleType="center"
+					android:src="@drawable/phone"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+			</androidx.constraintlayout.motion.widget.MotionLayout>
+
+			<androidx.constraintlayout.motion.widget.MotionLayout
+				android:id="@+id/circleViewMotionLayout"
+				android:layout_width="match_parent"
+				android:layout_height="400dp"
+				android:layout_marginTop="10dp"
+				android:background="@color/black"
+				app:layoutDescription="@xml/circle_shown_scene">
+
+				<View
+					android:id="@+id/white"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:background="@drawable/circle"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<View
+					android:id="@+id/green"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:background="@drawable/circle"
+					android:backgroundTint="@color/green"
+					app:layout_constraintEnd_toStartOf="@+id/white"
+					app:layout_constraintTop_toBottomOf="@+id/white" />
+
+				<View
+					android:id="@+id/yellow"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:background="@drawable/circle"
+					android:backgroundTint="@color/yellow"
+					app:layout_constraintBottom_toTopOf="@+id/white"
+					app:layout_constraintStart_toEndOf="@+id/white" />
+
+				<View
+					android:id="@+id/blue"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:background="@drawable/circle"
+					android:backgroundTint="@color/blue"
+					app:layout_constraintStart_toEndOf="@+id/white"
+					app:layout_constraintTop_toBottomOf="@+id/white" />
+
+				<View
+					android:id="@+id/red"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:background="@drawable/circle"
+					android:backgroundTint="@color/red"
+					app:layout_constraintBottom_toTopOf="@+id/white"
+					app:layout_constraintEnd_toStartOf="@+id/white" />
 
 			</androidx.constraintlayout.motion.widget.MotionLayout>
 
 		</LinearLayout>
 
-	</ScrollView>
+	</androidx.core.widget.NestedScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+	<Button
+		android:id="@+id/useFreeButton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="2주 무료 이용"
+		android:textSize="18sp"
+		app:layout_constraintTop_toBottomOf="@+id/scrollView"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
 
