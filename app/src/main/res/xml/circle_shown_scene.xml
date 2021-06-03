@@ -3,114 +3,261 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetEnd="@+id/end"
-        motion:constraintSetStart="@id/start"
-        motion:duration="1500"/>
+        motion:constraintSetEnd="@+id/circle_shown_end1"
+        motion:constraintSetStart="@+id/circle_shown_start1"
+        motion:duration="500"
+        motion:motionInterpolator="easeIn" />
 
-    <ConstraintSet android:id="@+id/start">
+    <Transition
+        motion:constraintSetEnd="@+id/circle_shown_end2"
+        motion:constraintSetStart="@+id/circle_shown_start2"
+        motion:duration="500"
+        motion:motionInterpolator="easeIn" />
+
+    <ConstraintSet android:id="@+id/circle_shown_start1">
+        <Constraint
+            android:id="@+id/red"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.3"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.3" />
+
+        <Constraint
+            android:id="@+id/yellow"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.7"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.3" />
+
+        <Constraint
+            android:id="@+id/green"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.3"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.7" />
+
+        <Constraint
+            android:id="@+id/blue"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.7"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.7" />
         <Constraint
             android:id="@+id/white"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:alpha="0"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/circle_shown_end1">
         <Constraint
             android:id="@+id/red"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleX="2"
-            android:scaleY="2"
-            motion:layout_constraintBottom_toTopOf="@+id/white"
-            motion:layout_constraintEnd_toStartOf="@+id/white" />
-
-        <Constraint
-            android:id="@+id/yellow"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleX="2"
-            android:scaleY="2"
-            motion:layout_constraintBottom_toTopOf="@+id/white"
-            motion:layout_constraintStart_toEndOf="@+id/white" />
-
-        <Constraint
-            android:id="@+id/green"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleX="2"
-            android:scaleY="2"
-            motion:layout_constraintEnd_toStartOf="@+id/white"
-            motion:layout_constraintTop_toBottomOf="@+id/white" />
-
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.3"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.3" />
         <Constraint
             android:id="@+id/blue"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleX="2"
-            android:scaleY="2"
-            motion:layout_constraintStart_toEndOf="@+id/white"
-            motion:layout_constraintTop_toBottomOf="@+id/white" />
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.7"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.7" />
+        <Constraint
+            android:id="@+id/yellow"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.7"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.3" />
+        <Constraint
+            android:id="@+id/green"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.3"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.7" />
 
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/end">
         <Constraint
             android:id="@+id/white"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleY="2.5"
-            android:scaleX="2.5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/circle_shown_start2">
         <Constraint
             android:id="@+id/red"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
-            motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintBottom_toTopOf="@+id/white"
-            motion:layout_constraintEnd_toStartOf="@+id/white" />
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintEnd_toStartOf="@+id/white"
+            motion:layout_constraintBottom_toTopOf="@+id/white"/>
 
         <Constraint
             android:id="@+id/yellow"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
-            motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintBottom_toTopOf="@+id/white"
-            motion:layout_constraintStart_toEndOf="@+id/white" />
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/white"
+            motion:layout_constraintBottom_toTopOf="@+id/white"/>
 
         <Constraint
             android:id="@+id/green"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
             motion:layout_constraintEnd_toStartOf="@+id/white"
-            motion:layout_constraintTop_toBottomOf="@+id/white" />
+            motion:layout_constraintTop_toBottomOf="@+id/white"/>
 
         <Constraint
             android:id="@+id/blue"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
             motion:layout_constraintStart_toEndOf="@+id/white"
-            motion:layout_constraintTop_toBottomOf="@+id/white" />
+            motion:layout_constraintTop_toBottomOf="@+id/white"/>
 
+        <Constraint
+            android:id="@+id/white"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            android:scaleX="1"
+            android:scaleY="1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/circle_shown_end2">
+        <Constraint
+            android:id="@+id/red"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintEnd_toStartOf="@+id/white"
+            motion:layout_constraintBottom_toTopOf="@+id/white"/>
+
+        <Constraint
+            android:id="@+id/yellow"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/white"
+            motion:layout_constraintBottom_toTopOf="@+id/white"/>
+
+        <Constraint
+            android:id="@+id/green"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintEnd_toStartOf="@+id/white"
+            motion:layout_constraintTop_toBottomOf="@+id/white"/>
+
+        <Constraint
+            android:id="@+id/blue"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/white"
+            motion:layout_constraintTop_toBottomOf="@+id/white"/>
+
+        <Constraint
+            android:id="@+id/white"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="1"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            motion:layout_goneMarginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
     </ConstraintSet>
 
 </MotionScene>

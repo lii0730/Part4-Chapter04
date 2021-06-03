@@ -11,12 +11,9 @@
 
 	<androidx.core.widget.NestedScrollView
 		android:id="@+id/scrollView"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent">
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fitsSystemWindows="true">
 
 		<LinearLayout
 			android:id="@+id/linearLayout"
@@ -82,6 +79,38 @@
 
 			</androidx.constraintlayout.motion.widget.MotionLayout>
 
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<TextView
+					android:id="@+id/title1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textSize="25sp"
+					android:textColor="@color/white"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintBottom_toTopOf="@+id/title2"
+					android:gravity="center"
+					android:text="5억개 평가 데이터 기반\n정확한 추천"/>
+
+				<TextView
+					android:id="@+id/title2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@color/white_60"
+					android:textSize="18sp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/title1"
+					app:layout_constraintBottom_toBottomOf="parent"
+					android:gravity="center"
+					android:text="취향에 안 맞는 작품에\n 두시간을 낭비할 순 없으니까"/>
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
 			<androidx.constraintlayout.motion.widget.MotionLayout
 				android:id="@+id/circleViewMotionLayout"
 				android:layout_width="match_parent"
@@ -92,9 +121,10 @@
 
 				<View
 					android:id="@+id/white"
-					android:layout_width="50dp"
-					android:layout_height="50dp"
+					android:layout_width="120dp"
+					android:layout_height="120dp"
 					android:background="@drawable/circle"
+					android:backgroundTint="@color/white"
 					app:layout_constraintBottom_toBottomOf="parent"
 					app:layout_constraintEnd_toEndOf="parent"
 					app:layout_constraintStart_toStartOf="parent"
@@ -102,39 +132,47 @@
 
 				<View
 					android:id="@+id/green"
-					android:layout_width="50dp"
-					android:layout_height="50dp"
-					android:background="@drawable/circle"
+					android:layout_width="120dp"
+					android:layout_height="120dp"
 					android:backgroundTint="@color/green"
-					app:layout_constraintEnd_toStartOf="@+id/white"
-					app:layout_constraintTop_toBottomOf="@+id/white" />
+					android:background="@drawable/circle"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintBottom_toBottomOf="parent"/>
 
 				<View
 					android:id="@+id/yellow"
-					android:layout_width="50dp"
-					android:layout_height="50dp"
-					android:background="@drawable/circle"
+					android:layout_width="120dp"
+					android:layout_height="120dp"
 					android:backgroundTint="@color/yellow"
-					app:layout_constraintBottom_toTopOf="@+id/white"
-					app:layout_constraintStart_toEndOf="@+id/white" />
+					android:background="@drawable/circle"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintBottom_toBottomOf="parent"/>
 
 				<View
 					android:id="@+id/blue"
-					android:layout_width="50dp"
-					android:layout_height="50dp"
-					android:background="@drawable/circle"
+					android:layout_width="120dp"
+					android:layout_height="120dp"
 					android:backgroundTint="@color/blue"
-					app:layout_constraintStart_toEndOf="@+id/white"
-					app:layout_constraintTop_toBottomOf="@+id/white" />
+					android:background="@drawable/circle"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintBottom_toBottomOf="parent" />
 
 				<View
 					android:id="@+id/red"
-					android:layout_width="50dp"
-					android:layout_height="50dp"
+					android:layout_width="120dp"
+					android:layout_height="120dp"
 					android:background="@drawable/circle"
 					android:backgroundTint="@color/red"
-					app:layout_constraintBottom_toTopOf="@+id/white"
-					app:layout_constraintEnd_toStartOf="@+id/white" />
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintBottom_toBottomOf="parent" />
 
 			</androidx.constraintlayout.motion.widget.MotionLayout>
 
