@@ -5,7 +5,7 @@
     <Transition
         app:constraintSetEnd="@+id/end1"
         app:constraintSetStart="@+id/start1"
-        app:duration="500">
+        app:duration="1000">
 
         <KeyFrameSet>
             <KeyAttribute
@@ -83,7 +83,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.74" />
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.495" />
         <Constraint
             android:id="@+id/tablet_imageView"
             android:layout_width="200dp"
@@ -96,6 +97,7 @@
             android:layout_height="180dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end1">
@@ -111,7 +113,6 @@
             android:id="@+id/laptop_imageView"
             android:layout_width="300dp"
             android:layout_height="200dp"
-            app:layout_constraintHorizontal_bias=".7"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +134,8 @@
             android:layout_height="180dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.85"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"/>
+
     </ConstraintSet>
 </MotionScene>

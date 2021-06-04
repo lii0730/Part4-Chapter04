@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/background_end"
+        motion:constraintSetStart="@id/background_start"
+        motion:duration="1000">
+        <KeyFrameSet></KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/background_start">
+        <Constraint
+            android:id="@+id/backgroundImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+            android:id="@+id/backgroundDimView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            motion:layout_constraintBottom_toBottomOf="@+id/backgroundImageView"
+            motion:layout_constraintEnd_toEndOf="@+id/backgroundImageView"
+            motion:layout_constraintStart_toStartOf="@+id/backgroundImageView"
+            motion:layout_constraintTop_toTopOf="@+id/backgroundImageView" />
+        <Constraint
+            android:id="@+id/DigitalThingsTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:alpha="0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/DigitalThingsContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/DigitalThingsTitleTextView" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/background_end">
+        <Constraint
+            android:id="@+id/backgroundImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.4"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+            android:id="@+id/backgroundDimView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.7"
+            motion:layout_constraintBottom_toBottomOf="@+id/backgroundImageView"
+            motion:layout_constraintEnd_toEndOf="@+id/backgroundImageView"
+            motion:layout_constraintStart_toStartOf="@+id/backgroundImageView"
+            motion:layout_constraintTop_toTopOf="@+id/backgroundImageView" />
+        <Constraint
+            android:id="@+id/DigitalThingsTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toTopOf="@+id/DigitalThingsContentTextView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/DigitalThingsContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            motion:layout_constraintTop_toBottomOf="@id/DigitalThingsTitleTextView"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toTopOf="@+id/tv_imageView" />
+    </ConstraintSet>
+</MotionScene>

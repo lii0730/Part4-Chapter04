@@ -1,10 +1,15 @@
 package com.example.aop_part4_chapter04
 
+import android.app.Activity
 import android.content.Context
+import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.TypedValue
+import android.view.View
+import android.view.WindowManager
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.example.aop_part4_chapter04.databinding.ActivityMainBinding
 
@@ -21,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(mainBinding.root)
 
+        makeStatusBarTransparent()
+
         initScrollViewListener()
         initMotionLayoutListener()
     }
@@ -31,21 +38,21 @@ class MainActivity : AppCompatActivity() {
         mainBinding.scrollView.viewTreeObserver.addOnScrollChangedListener {
             val scrolledValue = mainBinding.scrollView.scrollY
 
-            if (scrolledValue > 150f.dpToPx(this@MainActivity).toInt()) {
+            if (scrolledValue > 300f.dpToPx(this@MainActivity).toInt()) {
                 if (isGatheringAnimating.not()) {
-//                    mainBinding.gatheringDigitalThingsBackgroundMotionLayout.transitionToEnd()
-                    mainBinding.gatheringDigitalThingsLayout.transitionToEnd()
+                    mainBinding.backgroundMotionLayout.transitionToEnd()
+                    mainBinding.DigitalThingsLayout.transitionToEnd()
                     mainBinding.buttonShownMotionLayout.transitionToEnd()
                 }
             } else {
                 if (isGatheringAnimating.not()) {
-//                    mainBinding.gatheringDigitalThingsBackgroundMotionLayout.transitionToStart()
-                    mainBinding.gatheringDigitalThingsLayout.transitionToStart()
+                    mainBinding.backgroundMotionLayout.transitionToStart()
+                    mainBinding.DigitalThingsLayout.transitionToStart()
                     mainBinding.buttonShownMotionLayout.transitionToStart()
                 }
             }
 
-            if(scrolledValue > mainBinding.scrollView.height / 2) {
+            if(scrolledValue > mainBinding.scrollView.height) {
                 if(!isCircleAnimating) {
                     mainBinding.circleViewMotionLayout.setTransition(R.id.circle_shown_start1, R.id.circle_shown_end1)
                     mainBinding.circleViewMotionLayout.transitionToEnd()
@@ -56,7 +63,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initMotionLayoutListener() {
-        mainBinding.gatheringDigitalThingsLayout.setTransitionListener(object: MotionLayout.TransitionListener{
+        mainBinding.DigitalThingsLayout.setTransitionListener(object: MotionLayout.TransitionListener{
             override fun onTransitionStarted(p0: MotionLayout?, startId: Int, endId: Int) {
                 //TODO: 전환을 시작하려고 할 때
                 isGatheringAnimating = true
@@ -104,3 +111,15 @@ class MainActivity : AppCompatActivity() {
 
 fun Float.dpToPx(context: Context): Float =
     TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, context.resources.displayMetrics)
+
+fun Activity.makeStatusBarTransparent() {
+    with(window) {
+        decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+        addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            statusBarColor = Color.TRANSPARENT
+        }
+    }
+}

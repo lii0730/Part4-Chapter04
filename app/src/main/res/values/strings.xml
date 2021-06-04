@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AOP-Part4-Chapter04</string>
+    <string name="useFreeText">2주 무료 이용</string>
+    <string name="title2_text">취향에 안 맞는 작품에\n 두시간을 낭비할 순 없으니까</string>
+    <string name="title1_text">5억개 평가 데이터 기반\n정확한 추천</string>
+    <string name="intro_subtitle_text">영화, 드라마, 예능 등 8만 편의 작품</string>
+    <string name="intro_title_text">지금 무료로 \n 무제한 감상 시작</string>
 </resources>
