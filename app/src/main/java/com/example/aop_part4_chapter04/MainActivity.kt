@@ -4,12 +4,11 @@ import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.example.aop_part4_chapter04.databinding.ActivityMainBinding
 
@@ -28,9 +27,21 @@ class MainActivity : AppCompatActivity() {
 
         makeStatusBarTransparent()
 
+//        initActionBar()
         initScrollViewListener()
         initMotionLayoutListener()
     }
+
+//    private fun initActionBar() = with(mainBinding) {
+//        toolBar.navigationIcon = null
+//        toolBar.setContentInsetsAbsolute(0,0)
+//        setSupportActionBar(toolBar)
+//        supportActionBar?.let {
+//            it.setHomeButtonEnabled(false)
+//            it.setDisplayHomeAsUpEnabled(false)
+//            it.setDisplayShowHomeEnabled(false)
+//        }
+//    }
 
     private fun initScrollViewListener() {
         mainBinding.scrollView.smoothScrollTo(0, 0)
@@ -38,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding.scrollView.viewTreeObserver.addOnScrollChangedListener {
             val scrolledValue = mainBinding.scrollView.scrollY
 
-            if (scrolledValue > 300f.dpToPx(this@MainActivity).toInt()) {
+            if (scrolledValue > 150f.dpToPx(this@MainActivity).toInt()) {
                 if (isGatheringAnimating.not()) {
                     mainBinding.backgroundMotionLayout.transitionToEnd()
                     mainBinding.DigitalThingsLayout.transitionToEnd()
